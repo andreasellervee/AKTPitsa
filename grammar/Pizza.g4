@@ -1,17 +1,22 @@
 grammar Pizza;
 
 pizza
-    :   pizza2 showm? showw?
+    :   pizza2
     ;
 pizza2
     :   pizza1 createIn addi* addp*
-    |   pizza1 createIn addi* addp*?
-    |   pizza1 createIn addi*?
-    |   pizza1 createIn?
     |   pizza1
     ;
 pizza1
-    :   createM setName?                        
+    :   createM show*? setName*?
+    |   createM setName*? show*?
+    ;
+show
+    :   showwithouti
+    |   showwithi
+    |   showwithoutt
+    |   showwitht
+    |   showm
     ;
 
 createM
@@ -24,7 +29,7 @@ createIn
     :   'createIngredients();'                  #LooKoostis
     ;
 addi
-    :   'add' 'new' 'incredient' '=' '{'Nimi',' Nimi'};'    #LisaKoostis
+    :   'add' 'new' 'ingredient' '=' '{'Nimi',' Nimi'};'    #LisaKoostisListi
     ;
 addp
     :   'add' 'new' 'pizza' '=' '{ nimi:'Nimi', hind:'Arv','add (','add)*?'};'  #LisaPitsa
@@ -35,8 +40,17 @@ add
 showm
     :   'showMenu();'                           #NaitaMenuu
     ;
-showw
-    :   'showWith("'Nimi'");'                   #NaitaKoostis
+showwithouti
+    :   'showWithoutIngredient("'Nimi'");'      #NaitaKoostiseta
+    ;
+showwithi
+    :   'showWithIngredient("'Nimi'");'         #NaitaKoostisega
+    ;
+showwithoutt
+    :   'showWithoutType("'Nimi'");'            #NaitaTuubita
+    ;
+showwitht
+    :   'showWithType("'Nimi'");'               #NaitaTuubiga
     ;
 Nimi : [a-zA-Z][a-zA-Z]*;
 Arv

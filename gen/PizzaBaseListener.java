@@ -29,32 +29,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterShoww(@NotNull PizzaParser.ShowwContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitShoww(@NotNull PizzaParser.ShowwContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterAddi(@NotNull PizzaParser.AddiContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAddi(@NotNull PizzaParser.AddiContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterPizza2(@NotNull PizzaParser.Pizza2Context ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -68,13 +42,130 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddp(@NotNull PizzaParser.AddpContext ctx) { }
+	@Override public void enterNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAddp(@NotNull PizzaParser.AddpContext ctx) { }
+	@Override public void exitNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLisaKoostisListi(@NotNull PizzaParser.LisaKoostisListiContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLisaKoostisListi(@NotNull PizzaParser.LisaKoostisListiContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLoomenuu(@NotNull PizzaParser.LoomenuuContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLoomenuu(@NotNull PizzaParser.LoomenuuContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterShow(@NotNull PizzaParser.ShowContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShow(@NotNull PizzaParser.ShowContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNaitaKoostiseta(@NotNull PizzaParser.NaitaKoostisetaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNaitaKoostiseta(@NotNull PizzaParser.NaitaKoostisetaContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMenuuNimi(@NotNull PizzaParser.MenuuNimiContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMenuuNimi(@NotNull PizzaParser.MenuuNimiContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -94,65 +185,26 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterShowm(@NotNull PizzaParser.ShowmContext ctx) { }
+	@Override public void enterNaitaTuubiga(@NotNull PizzaParser.NaitaTuubigaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitShowm(@NotNull PizzaParser.ShowmContext ctx) { }
+	@Override public void exitNaitaTuubiga(@NotNull PizzaParser.NaitaTuubigaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSetName(@NotNull PizzaParser.SetNameContext ctx) { }
+	@Override public void enterLisaPitsa(@NotNull PizzaParser.LisaPitsaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSetName(@NotNull PizzaParser.SetNameContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterAdd(@NotNull PizzaParser.AddContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAdd(@NotNull PizzaParser.AddContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterCreateIn(@NotNull PizzaParser.CreateInContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCreateIn(@NotNull PizzaParser.CreateInContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterCreateM(@NotNull PizzaParser.CreateMContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitCreateM(@NotNull PizzaParser.CreateMContext ctx) { }
+	@Override public void exitLisaPitsa(@NotNull PizzaParser.LisaPitsaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
