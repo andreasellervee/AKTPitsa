@@ -20,37 +20,37 @@ show
     ;
 
 createM
-    :   'createMenu();'                         #Loomenuu
+    :   'createMenu()'';'                         #Loomenuu
     ;
 setName
-    :   'SetMenuName("'Nimi'");'                #MenuuNimi
+    :   'SetMenuName(''"'Nimi'"'')'';'                #MenuuNimi
     ;
 createIn
-    :   'createIngredients();'                  #LooKoostis
+    :   'createIngredients()'';'                  #LooKoostis
     ;
 addi
-    :   'add' 'new' 'ingredient' '=' '{'Nimi',' Nimi'};'    #LisaKoostisListi
+    :   'add new ingredient' '=' '{'Nimi',' Nimi'}'';'    #LisaKoostisListi
     ;
 addp
-    :   'add' 'new' 'pizza' '=' '{nimi:'Nimi',hind:'Arv','add (','add)*?'};'  #LisaPitsa
+    :   'add new pizza' '=' '{''nimi'':'Nimi',''hind'':'Arv','add (','add)*?'}'';'  #LisaPitsa
     ;
 add
-    :   'add:'Nimi                             #LisaKoostis
+    :   'add'':'Nimi                             #LisaKoostis
     ;
 showm
-    :   'showMenu();'                           #NaitaMenuu
+    :   'showMenu()'';'                           #NaitaMenuu
     ;
 showwithouti
-    :   'showWithoutIngredient("'Nimi'");'      #NaitaKoostiseta
+    :   'showWithoutIngredient(''"'Nimi'"'')'';'      #NaitaKoostiseta
     ;
 showwithi
-    :   'showWithIngredient("'Nimi'");'         #NaitaKoostisega
+    :   'showWithIngredient(''"'Nimi'"'')'';'         #NaitaKoostisega
     ;
 showwithoutt
-    :   'showWithoutType("'Nimi'");'            #NaitaTuubita
+    :   'showWithoutType(''"'Nimi'"'')'';'            #NaitaTuubita
     ;
 showwitht
-    :   'showWithType("'Nimi'");'               #NaitaTuubiga
+    :   'showWithType(''"'Nimi'"'')'';'               #NaitaTuubiga
     ;
 Nimi : [a-zA-Z][a-zA-Z]*;
 Arv

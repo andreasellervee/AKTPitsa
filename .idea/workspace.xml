@@ -26,8 +26,8 @@
       <file leaf-file-name="Pizza.g4" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grammar/Pizza.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7062635" vertical-offset="625" max-vertical-offset="1088">
-              <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.4859611" vertical-offset="557" max-vertical-offset="1088">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -324,8 +324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grammar/Pizza.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7062635" vertical-offset="625" max-vertical-offset="1088">
-          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.4859611" vertical-offset="557" max-vertical-offset="1088">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding />
         </state>
       </provider>
