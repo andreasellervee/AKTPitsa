@@ -19,9 +19,10 @@ public class PizzaParser extends Parser {
 		T__3=17, T__2=18, T__1=19, T__0=20, Nimi=21, Arv=22, WS=23;
 	public static final String[] tokenNames = {
 		"<INVALID>", "'showMenu();'", "'pizza'", "','", "'showWithType(\"'", "'createMenu();'", 
-		"'add: '", "'showWithoutIngredient(\"'", "'};'", "'='", "', hind:'", "'ingredient'", 
-		"'SetMenuName(\"'", "'{'", "'showWithoutType(\"'", "'new'", "'add'", "'createIngredients();'", 
-		"'{ nimi:'", "'\");'", "'showWithIngredient(\"'", "Nimi", "Arv", "WS"
+		"'showWithoutIngredient(\"'", "'};'", "'='", "',hind:'", "'ingredient'", 
+		"'SetMenuName(\"'", "'add:'", "'{'", "'showWithoutType(\"'", "'{nimi:'", 
+		"'new'", "'add'", "'createIngredients();'", "'\");'", "'showWithIngredient(\"'", 
+		"Nimi", "Arv", "WS"
 	};
 	public static final int
 		RULE_pizza = 0, RULE_pizza2 = 1, RULE_pizza1 = 2, RULE_show = 3, RULE_createM = 4, 
@@ -165,7 +166,7 @@ public class PizzaParser extends Parser {
 				setState(43);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (_la==16) {
+				while (_la==17) {
 					{
 					{
 					setState(40); addp();
@@ -366,7 +367,7 @@ public class PizzaParser extends Parser {
 		try {
 			setState(82);
 			switch (_input.LA(1)) {
-			case 7:
+			case 6:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(77); showwithouti();
@@ -496,7 +497,7 @@ public class PizzaParser extends Parser {
 			_localctx = new MenuuNimiContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(86); match(12);
+			setState(86); match(11);
 			setState(87); match(Nimi);
 			setState(88); match(19);
 			}
@@ -547,7 +548,7 @@ public class PizzaParser extends Parser {
 			_localctx = new LooKoostisContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(90); match(17);
+			setState(90); match(18);
 			}
 		}
 		catch (RecognitionException re) {
@@ -600,15 +601,15 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaKoostisListiContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(92); match(16);
-			setState(93); match(15);
-			setState(94); match(11);
-			setState(95); match(9);
+			setState(92); match(17);
+			setState(93); match(16);
+			setState(94); match(10);
+			setState(95); match(8);
 			setState(96); match(13);
 			setState(97); match(Nimi);
 			setState(98); match(3);
 			setState(99); match(Nimi);
-			setState(100); match(8);
+			setState(100); match(7);
 			}
 		}
 		catch (RecognitionException re) {
@@ -666,13 +667,13 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaPitsaContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(102); match(16);
-			setState(103); match(15);
+			setState(102); match(17);
+			setState(103); match(16);
 			setState(104); match(2);
-			setState(105); match(9);
-			setState(106); match(18);
+			setState(105); match(8);
+			setState(106); match(15);
 			setState(107); match(Nimi);
-			setState(108); match(10);
+			setState(108); match(9);
 			setState(109); match(Arv);
 			setState(110); match(3);
 			setState(111); add();
@@ -692,7 +693,7 @@ public class PizzaParser extends Parser {
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,9,_ctx);
 			}
-			setState(119); match(8);
+			setState(119); match(7);
 			}
 		}
 		catch (RecognitionException re) {
@@ -742,7 +743,7 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaKoostisContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(121); match(6);
+			setState(121); match(12);
 			setState(122); match(Nimi);
 			}
 		}
@@ -842,7 +843,7 @@ public class PizzaParser extends Parser {
 			_localctx = new NaitaKoostisetaContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(126); match(7);
+			setState(126); match(6);
 			setState(127); match(Nimi);
 			setState(128); match(19);
 			}
@@ -1039,14 +1040,14 @@ public class PizzaParser extends Parser {
 		"\2HG\3\2\2\2IL\3\2\2\2JK\3\2\2\2JH\3\2\2\2KN\3\2\2\2LJ\3\2\2\2M\63\3\2"+
 		"\2\2M@\3\2\2\2N\7\3\2\2\2OU\5\30\r\2PU\5\32\16\2QU\5\34\17\2RU\5\36\20"+
 		"\2SU\5\26\f\2TO\3\2\2\2TP\3\2\2\2TQ\3\2\2\2TR\3\2\2\2TS\3\2\2\2U\t\3\2"+
-		"\2\2VW\7\7\2\2W\13\3\2\2\2XY\7\16\2\2YZ\7\27\2\2Z[\7\25\2\2[\r\3\2\2\2"+
-		"\\]\7\23\2\2]\17\3\2\2\2^_\7\22\2\2_`\7\21\2\2`a\7\r\2\2ab\7\13\2\2bc"+
-		"\7\17\2\2cd\7\27\2\2de\7\5\2\2ef\7\27\2\2fg\7\n\2\2g\21\3\2\2\2hi\7\22"+
-		"\2\2ij\7\21\2\2jk\7\4\2\2kl\7\13\2\2lm\7\24\2\2mn\7\27\2\2no\7\f\2\2o"+
-		"p\7\30\2\2pq\7\5\2\2qv\5\24\13\2rs\7\5\2\2su\5\24\13\2tr\3\2\2\2ux\3\2"+
-		"\2\2vw\3\2\2\2vt\3\2\2\2wy\3\2\2\2xv\3\2\2\2yz\7\n\2\2z\23\3\2\2\2{|\7"+
-		"\b\2\2|}\7\27\2\2}\25\3\2\2\2~\177\7\3\2\2\177\27\3\2\2\2\u0080\u0081"+
-		"\7\t\2\2\u0081\u0082\7\27\2\2\u0082\u0083\7\25\2\2\u0083\31\3\2\2\2\u0084"+
+		"\2\2VW\7\7\2\2W\13\3\2\2\2XY\7\r\2\2YZ\7\27\2\2Z[\7\25\2\2[\r\3\2\2\2"+
+		"\\]\7\24\2\2]\17\3\2\2\2^_\7\23\2\2_`\7\22\2\2`a\7\f\2\2ab\7\n\2\2bc\7"+
+		"\17\2\2cd\7\27\2\2de\7\5\2\2ef\7\27\2\2fg\7\t\2\2g\21\3\2\2\2hi\7\23\2"+
+		"\2ij\7\22\2\2jk\7\4\2\2kl\7\n\2\2lm\7\21\2\2mn\7\27\2\2no\7\13\2\2op\7"+
+		"\30\2\2pq\7\5\2\2qv\5\24\13\2rs\7\5\2\2su\5\24\13\2tr\3\2\2\2ux\3\2\2"+
+		"\2vw\3\2\2\2vt\3\2\2\2wy\3\2\2\2xv\3\2\2\2yz\7\t\2\2z\23\3\2\2\2{|\7\16"+
+		"\2\2|}\7\27\2\2}\25\3\2\2\2~\177\7\3\2\2\177\27\3\2\2\2\u0080\u0081\7"+
+		"\b\2\2\u0081\u0082\7\27\2\2\u0082\u0083\7\25\2\2\u0083\31\3\2\2\2\u0084"+
 		"\u0085\7\26\2\2\u0085\u0086\7\27\2\2\u0086\u0087\7\25\2\2\u0087\33\3\2"+
 		"\2\2\u0088\u0089\7\20\2\2\u0089\u008a\7\27\2\2\u008a\u008b\7\25\2\2\u008b"+
 		"\35\3\2\2\2\u008c\u008d\7\6\2\2\u008d\u008e\7\27\2\2\u008e\u008f\7\25"+

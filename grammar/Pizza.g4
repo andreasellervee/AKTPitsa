@@ -32,10 +32,10 @@ addi
     :   'add' 'new' 'ingredient' '=' '{'Nimi',' Nimi'};'    #LisaKoostisListi
     ;
 addp
-    :   'add' 'new' 'pizza' '=' '{ nimi:'Nimi', hind:'Arv','add (','add)*?'};'  #LisaPitsa
+    :   'add' 'new' 'pizza' '=' '{nimi:'Nimi',hind:'Arv','add (','add)*?'};'  #LisaPitsa
     ;
 add
-    :   'add: 'Nimi                             #LisaKoostis
+    :   'add:'Nimi                             #LisaKoostis
     ;
 showm
     :   'showMenu();'                           #NaitaMenuu
