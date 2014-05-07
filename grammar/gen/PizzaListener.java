@@ -1,4 +1,4 @@
-// Generated from C:/Veebirakendused/New folder/Pizza/grammar\Pizza.g4 by ANTLR 4.x
+// Generated from C:/Users/Andreas/Documents/kool/automaadid translaatorid/Projekt/grammar\Pizza.g4 by ANTLR 4.x
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -8,26 +8,15 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface PizzaListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#pizza1}.
+	 * Enter a parse tree produced by {@link PizzaParser#LisaKoostis}.
 	 * @param ctx the parse tree
 	 */
-	void enterPizza1(@NotNull PizzaParser.Pizza1Context ctx);
+	void enterLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PizzaParser#pizza1}.
+	 * Exit a parse tree produced by {@link PizzaParser#LisaKoostis}.
 	 * @param ctx the parse tree
 	 */
-	void exitPizza1(@NotNull PizzaParser.Pizza1Context ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link PizzaParser#pizza2}.
-	 * @param ctx the parse tree
-	 */
-	void enterPizza2(@NotNull PizzaParser.Pizza2Context ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#pizza2}.
-	 * @param ctx the parse tree
-	 */
-	void exitPizza2(@NotNull PizzaParser.Pizza2Context ctx);
+	void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link PizzaParser#NaitaKoostisega}.
@@ -41,15 +30,15 @@ public interface PizzaListener extends ParseTreeListener {
 	void exitNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#LisaKoostis}.
+	 * Enter a parse tree produced by {@link PizzaParser#Pizza2R}.
 	 * @param ctx the parse tree
 	 */
-	void enterLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
+	void enterPizza2R(@NotNull PizzaParser.Pizza2RContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PizzaParser#LisaKoostis}.
+	 * Exit a parse tree produced by {@link PizzaParser#Pizza2R}.
 	 * @param ctx the parse tree
 	 */
-	void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
+	void exitPizza2R(@NotNull PizzaParser.Pizza2RContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link PizzaParser#LisaKoostisListi}.
@@ -96,6 +85,17 @@ public interface PizzaListener extends ParseTreeListener {
 	void exitShow(@NotNull PizzaParser.ShowContext ctx);
 
 	/**
+	 * Enter a parse tree produced by {@link PizzaParser#PizzaR}.
+	 * @param ctx the parse tree
+	 */
+	void enterPizzaR(@NotNull PizzaParser.PizzaRContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#PizzaR}.
+	 * @param ctx the parse tree
+	 */
+	void exitPizzaR(@NotNull PizzaParser.PizzaRContext ctx);
+
+	/**
 	 * Enter a parse tree produced by {@link PizzaParser#NaitaMenuu}.
 	 * @param ctx the parse tree
 	 */
@@ -138,17 +138,6 @@ public interface PizzaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link PizzaParser#pizza}.
-	 * @param ctx the parse tree
-	 */
-	void enterPizza(@NotNull PizzaParser.PizzaContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#pizza}.
-	 * @param ctx the parse tree
-	 */
-	void exitPizza(@NotNull PizzaParser.PizzaContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link PizzaParser#NaitaTuubiga}.

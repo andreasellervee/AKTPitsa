@@ -1,16 +1,12 @@
 grammar Pizza;
 
 pizza
-    :   pizza2
+    :   pizza2                          #PizzaR
     ;
 pizza2
-    :   pizza1 createIn addi* addp*
-    |   pizza1
+    :   createM setName? show? createIn addi+ addp* show*?    #Pizza2R
     ;
-pizza1
-    :   createM show*? setName*?
-    |   createM setName*? show*?
-    ;
+
 show
     :   showwithouti
     |   showwithi
@@ -29,13 +25,13 @@ createIn
     :   'createIngredients();'                  #LooKoostis
     ;
 addi
-    :   'add' 'new' 'ingredient' '=' '{'Nimi',' Nimi'};'    #LisaKoostisListi
+    :   'add new ingredient' '=' '{'Nimi',' Nimi'}' ';'    #LisaKoostisListi
     ;
 addp
-    :   'add' 'new' 'pizza' '=' '{ nimi:'Nimi', hind:'Arv','add (','add)*?'};'  #LisaPitsa
+    :   'add new pizza' '=' '{' 'nimi' ':'Nimi',' 'hind:'Arv','add (','add)*?'}' ';'  #LisaPitsa
     ;
 add
-    :   'add: 'Nimi                             #LisaKoostis
+    :   'add' ':'Nimi                             #LisaKoostis
     ;
 showm
     :   'showMenu();'                           #NaitaMenuu

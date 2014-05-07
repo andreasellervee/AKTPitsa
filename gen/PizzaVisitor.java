@@ -1,4 +1,4 @@
-// Generated from C:/Veebirakendused/New folder/Pizza/grammar\Pizza.g4 by ANTLR 4.x
+// Generated from C:/Users/Andreas/Documents/kool/automaadid translaatorid/Projekt/grammar\Pizza.g4 by ANTLR 4.x
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -11,18 +11,11 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#pizza1}.
+	 * Visit a parse tree produced by {@link PizzaParser#LisaKoostis}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitPizza1(@NotNull PizzaParser.Pizza1Context ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link PizzaParser#pizza2}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPizza2(@NotNull PizzaParser.Pizza2Context ctx);
+	T visitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link PizzaParser#NaitaKoostisega}.
@@ -32,11 +25,11 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	T visitNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#LisaKoostis}.
+	 * Visit a parse tree produced by {@link PizzaParser#Pizza2R}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
+	T visitPizza2R(@NotNull PizzaParser.Pizza2RContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link PizzaParser#LisaKoostisListi}.
@@ -67,6 +60,13 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	T visitShow(@NotNull PizzaParser.ShowContext ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link PizzaParser#PizzaR}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPizzaR(@NotNull PizzaParser.PizzaRContext ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link PizzaParser#NaitaMenuu}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -93,13 +93,6 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link PizzaParser#pizza}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPizza(@NotNull PizzaParser.PizzaContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link PizzaParser#NaitaTuubiga}.

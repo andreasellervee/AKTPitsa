@@ -1,4 +1,4 @@
-// Generated from C:/Veebirakendused/New folder/Pizza/grammar\Pizza.g4 by ANTLR 4.x
+// Generated from C:/Users/Andreas/Documents/kool/automaadid translaatorid/Projekt/grammar\Pizza.g4 by ANTLR 4.x
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -16,26 +16,13 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPizza1(@NotNull PizzaParser.Pizza1Context ctx) { }
+	@Override public void enterLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPizza1(@NotNull PizzaParser.Pizza1Context ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterPizza2(@NotNull PizzaParser.Pizza2Context ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitPizza2(@NotNull PizzaParser.Pizza2Context ctx) { }
+	@Override public void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -55,13 +42,13 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
+	@Override public void enterPizza2R(@NotNull PizzaParser.Pizza2RContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
+	@Override public void exitPizza2R(@NotNull PizzaParser.Pizza2RContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -120,6 +107,19 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterPizzaR(@NotNull PizzaParser.PizzaRContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPizzaR(@NotNull PizzaParser.PizzaRContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -166,19 +166,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterPizza(@NotNull PizzaParser.PizzaContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitPizza(@NotNull PizzaParser.PizzaContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
