@@ -14,9 +14,11 @@ import java.util.Map;
 public class JPitsaMenyyParser {
 
     String programm;
-    public static boolean showmenu = false;
+    static boolean showmenu = false;
 
     String menuName;
+
+    StringBuilder errorid = new StringBuilder();
 
 
     public JPitsaMenyyParser(String program){
@@ -55,11 +57,8 @@ public class JPitsaMenyyParser {
         }
 
         else if(tree instanceof PizzaParser.LoomenuuContext){
-            if(tree.getText().equals("createMenu();")){
-                this.showmenu = true;
-            }
-            else{
-                throw new UnsupportedOperationException();
+            if(tree.getText().equals("createMenu();") != true){
+                errorid.append("Puudub createMenu();" + "\n");
             }
         }
 
@@ -105,6 +104,12 @@ public class JPitsaMenyyParser {
         }
 
         else if(tree instanceof PizzaParser.NaitaMenuuContext){
+            if(tree.getText().equals("showMenu();")){
+                this.showmenu = true;
+            }
+            else{
+                throw new UnsupportedOperationException();
+            }
 
         }
 
@@ -125,7 +130,7 @@ public class JPitsaMenyyParser {
         }
 
         else {
-            throw new UnsupportedOperationException();
+            errorid.append("ESIMENE ERROR");
         }
     }
 
