@@ -18,20 +18,6 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	T visitPizza1(@NotNull PizzaParser.Pizza1Context ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#showw}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitShoww(@NotNull PizzaParser.ShowwContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link PizzaParser#addi}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAddi(@NotNull PizzaParser.AddiContext ctx);
-
-	/**
 	 * Visit a parse tree produced by {@link PizzaParser#pizza2}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -39,11 +25,74 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	T visitPizza2(@NotNull PizzaParser.Pizza2Context ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#addp}.
+	 * Visit a parse tree produced by {@link PizzaParser#NaitaKoostisega}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAddp(@NotNull PizzaParser.AddpContext ctx);
+	T visitNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#LisaKoostis}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#LisaKoostisListi}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLisaKoostisListi(@NotNull PizzaParser.LisaKoostisListiContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#Loomenuu}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLoomenuu(@NotNull PizzaParser.LoomenuuContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#LooKoostis}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#show}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitShow(@NotNull PizzaParser.ShowContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#NaitaMenuu}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#NaitaKoostiseta}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNaitaKoostiseta(@NotNull PizzaParser.NaitaKoostisetaContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#MenuuNimi}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMenuuNimi(@NotNull PizzaParser.MenuuNimiContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link PizzaParser#NaitaTuubita}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link PizzaParser#pizza}.
@@ -53,37 +102,16 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	T visitPizza(@NotNull PizzaParser.PizzaContext ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#showm}.
+	 * Visit a parse tree produced by {@link PizzaParser#NaitaTuubiga}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitShowm(@NotNull PizzaParser.ShowmContext ctx);
+	T visitNaitaTuubiga(@NotNull PizzaParser.NaitaTuubigaContext ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#setName}.
+	 * Visit a parse tree produced by {@link PizzaParser#LisaPitsa}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSetName(@NotNull PizzaParser.SetNameContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link PizzaParser#add}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAdd(@NotNull PizzaParser.AddContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link PizzaParser#createIn}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCreateIn(@NotNull PizzaParser.CreateInContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link PizzaParser#createM}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitCreateM(@NotNull PizzaParser.CreateMContext ctx);
+	T visitLisaPitsa(@NotNull PizzaParser.LisaPitsaContext ctx);
 }

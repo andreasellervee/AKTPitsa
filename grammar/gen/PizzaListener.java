@@ -19,28 +19,6 @@ public interface PizzaListener extends ParseTreeListener {
 	void exitPizza1(@NotNull PizzaParser.Pizza1Context ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#showw}.
-	 * @param ctx the parse tree
-	 */
-	void enterShoww(@NotNull PizzaParser.ShowwContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#showw}.
-	 * @param ctx the parse tree
-	 */
-	void exitShoww(@NotNull PizzaParser.ShowwContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link PizzaParser#addi}.
-	 * @param ctx the parse tree
-	 */
-	void enterAddi(@NotNull PizzaParser.AddiContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#addi}.
-	 * @param ctx the parse tree
-	 */
-	void exitAddi(@NotNull PizzaParser.AddiContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link PizzaParser#pizza2}.
 	 * @param ctx the parse tree
 	 */
@@ -52,15 +30,114 @@ public interface PizzaListener extends ParseTreeListener {
 	void exitPizza2(@NotNull PizzaParser.Pizza2Context ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#addp}.
+	 * Enter a parse tree produced by {@link PizzaParser#NaitaKoostisega}.
 	 * @param ctx the parse tree
 	 */
-	void enterAddp(@NotNull PizzaParser.AddpContext ctx);
+	void enterNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PizzaParser#addp}.
+	 * Exit a parse tree produced by {@link PizzaParser#NaitaKoostisega}.
 	 * @param ctx the parse tree
 	 */
-	void exitAddp(@NotNull PizzaParser.AddpContext ctx);
+	void exitNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#LisaKoostis}.
+	 * @param ctx the parse tree
+	 */
+	void enterLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#LisaKoostis}.
+	 * @param ctx the parse tree
+	 */
+	void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#LisaKoostisListi}.
+	 * @param ctx the parse tree
+	 */
+	void enterLisaKoostisListi(@NotNull PizzaParser.LisaKoostisListiContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#LisaKoostisListi}.
+	 * @param ctx the parse tree
+	 */
+	void exitLisaKoostisListi(@NotNull PizzaParser.LisaKoostisListiContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#Loomenuu}.
+	 * @param ctx the parse tree
+	 */
+	void enterLoomenuu(@NotNull PizzaParser.LoomenuuContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#Loomenuu}.
+	 * @param ctx the parse tree
+	 */
+	void exitLoomenuu(@NotNull PizzaParser.LoomenuuContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#LooKoostis}.
+	 * @param ctx the parse tree
+	 */
+	void enterLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#LooKoostis}.
+	 * @param ctx the parse tree
+	 */
+	void exitLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#show}.
+	 * @param ctx the parse tree
+	 */
+	void enterShow(@NotNull PizzaParser.ShowContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#show}.
+	 * @param ctx the parse tree
+	 */
+	void exitShow(@NotNull PizzaParser.ShowContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#NaitaMenuu}.
+	 * @param ctx the parse tree
+	 */
+	void enterNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#NaitaMenuu}.
+	 * @param ctx the parse tree
+	 */
+	void exitNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#NaitaKoostiseta}.
+	 * @param ctx the parse tree
+	 */
+	void enterNaitaKoostiseta(@NotNull PizzaParser.NaitaKoostisetaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#NaitaKoostiseta}.
+	 * @param ctx the parse tree
+	 */
+	void exitNaitaKoostiseta(@NotNull PizzaParser.NaitaKoostisetaContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#MenuuNimi}.
+	 * @param ctx the parse tree
+	 */
+	void enterMenuuNimi(@NotNull PizzaParser.MenuuNimiContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#MenuuNimi}.
+	 * @param ctx the parse tree
+	 */
+	void exitMenuuNimi(@NotNull PizzaParser.MenuuNimiContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link PizzaParser#NaitaTuubita}.
+	 * @param ctx the parse tree
+	 */
+	void enterNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link PizzaParser#NaitaTuubita}.
+	 * @param ctx the parse tree
+	 */
+	void exitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link PizzaParser#pizza}.
@@ -74,57 +151,24 @@ public interface PizzaListener extends ParseTreeListener {
 	void exitPizza(@NotNull PizzaParser.PizzaContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#showm}.
+	 * Enter a parse tree produced by {@link PizzaParser#NaitaTuubiga}.
 	 * @param ctx the parse tree
 	 */
-	void enterShowm(@NotNull PizzaParser.ShowmContext ctx);
+	void enterNaitaTuubiga(@NotNull PizzaParser.NaitaTuubigaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PizzaParser#showm}.
+	 * Exit a parse tree produced by {@link PizzaParser#NaitaTuubiga}.
 	 * @param ctx the parse tree
 	 */
-	void exitShowm(@NotNull PizzaParser.ShowmContext ctx);
+	void exitNaitaTuubiga(@NotNull PizzaParser.NaitaTuubigaContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#setName}.
+	 * Enter a parse tree produced by {@link PizzaParser#LisaPitsa}.
 	 * @param ctx the parse tree
 	 */
-	void enterSetName(@NotNull PizzaParser.SetNameContext ctx);
+	void enterLisaPitsa(@NotNull PizzaParser.LisaPitsaContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link PizzaParser#setName}.
+	 * Exit a parse tree produced by {@link PizzaParser#LisaPitsa}.
 	 * @param ctx the parse tree
 	 */
-	void exitSetName(@NotNull PizzaParser.SetNameContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link PizzaParser#add}.
-	 * @param ctx the parse tree
-	 */
-	void enterAdd(@NotNull PizzaParser.AddContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#add}.
-	 * @param ctx the parse tree
-	 */
-	void exitAdd(@NotNull PizzaParser.AddContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link PizzaParser#createIn}.
-	 * @param ctx the parse tree
-	 */
-	void enterCreateIn(@NotNull PizzaParser.CreateInContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#createIn}.
-	 * @param ctx the parse tree
-	 */
-	void exitCreateIn(@NotNull PizzaParser.CreateInContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link PizzaParser#createM}.
-	 * @param ctx the parse tree
-	 */
-	void enterCreateM(@NotNull PizzaParser.CreateMContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#createM}.
-	 * @param ctx the parse tree
-	 */
-	void exitCreateM(@NotNull PizzaParser.CreateMContext ctx);
+	void exitLisaPitsa(@NotNull PizzaParser.LisaPitsaContext ctx);
 }
