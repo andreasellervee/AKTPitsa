@@ -23,7 +23,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLisaKoostis(@NotNull PizzaParser.LisaKoostisContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -36,7 +35,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNaitaKoostisega(@NotNull PizzaParser.NaitaKoostisegaContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -49,7 +47,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPizza2R(@NotNull PizzaParser.Pizza2RContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -62,7 +59,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLisaKoostisListi(@NotNull PizzaParser.LisaKoostisListiContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -75,7 +71,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLoomenuu(@NotNull PizzaParser.LoomenuuContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -88,20 +83,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterShow(@NotNull PizzaParser.ShowContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitShow(@NotNull PizzaParser.ShowContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -114,7 +95,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPizzaR(@NotNull PizzaParser.PizzaRContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -127,7 +107,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNaitaMenuu(@NotNull PizzaParser.NaitaMenuuContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -140,7 +119,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNaitaKoostiseta(@NotNull PizzaParser.NaitaKoostisetaContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -153,7 +131,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitMenuuNimi(@NotNull PizzaParser.MenuuNimiContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -166,7 +143,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNaitaTuubita(@NotNull PizzaParser.NaitaTuubitaContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *
@@ -179,7 +155,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNaitaTuubiga(@NotNull PizzaParser.NaitaTuubigaContext ctx) { }
-
 	/**
 	 * {@inheritDoc}
 	 *

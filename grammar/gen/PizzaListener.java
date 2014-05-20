@@ -74,17 +74,6 @@ public interface PizzaListener extends ParseTreeListener {
 	void exitLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx);
 
 	/**
-	 * Enter a parse tree produced by {@link PizzaParser#show}.
-	 * @param ctx the parse tree
-	 */
-	void enterShow(@NotNull PizzaParser.ShowContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link PizzaParser#show}.
-	 * @param ctx the parse tree
-	 */
-	void exitShow(@NotNull PizzaParser.ShowContext ctx);
-
-	/**
 	 * Enter a parse tree produced by {@link PizzaParser#PizzaR}.
 	 * @param ctx the parse tree
 	 */

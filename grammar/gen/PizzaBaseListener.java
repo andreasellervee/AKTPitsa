@@ -94,19 +94,6 @@ public class PizzaBaseListener implements PizzaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterShow(@NotNull PizzaParser.ShowContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitShow(@NotNull PizzaParser.ShowContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterPizzaR(@NotNull PizzaParser.PizzaRContext ctx) { }
 	/**
 	 * {@inheritDoc}

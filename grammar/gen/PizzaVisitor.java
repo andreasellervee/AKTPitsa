@@ -53,13 +53,6 @@ public interface PizzaVisitor<T> extends ParseTreeVisitor<T> {
 	T visitLooKoostis(@NotNull PizzaParser.LooKoostisContext ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link PizzaParser#show}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitShow(@NotNull PizzaParser.ShowContext ctx);
-
-	/**
 	 * Visit a parse tree produced by {@link PizzaParser#PizzaR}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

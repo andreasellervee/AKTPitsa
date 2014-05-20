@@ -31,12 +31,12 @@ T__4=16
 'nimi'=13
 '{'=12
 'hind:'=11
-'add new pizza'=9
-'SetMenuName("'=10
+'SetMenuName("'=9
+'add new pizza'=10
 ';'=8
 '='=7
-':'=5
-'showWithoutIngredient("'=6
+'showWithoutIngredient("'=5
+':'=6
 'createMenu();'=4
 'showWithType("'=3
 ','=2

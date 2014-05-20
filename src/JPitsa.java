@@ -195,15 +195,18 @@ public class JPitsa extends JFrame {
         public void actionPerformed(ActionEvent e) {
             changeLog.setText("");
         	String kood = textPane.getText();
-        	JPitsaMenyyParser pitsaparser = new JPitsaMenyyParser(kood);
-            System.out.println("Nimi: " + pitsaparser.menuName);
-            for(String x : pitsaparser.tyybid.keySet()){
-                for(String y : pitsaparser.tyybid.get(x)){
-                    System.out.println(x + ": " + y);
+            try{
+                JPitsaMenyyParser pitsaparser = new JPitsaMenyyParser(kood);
+                System.out.println("Nimi: " + pitsaparser.menuName);
+                for(String x : pitsaparser.tyybid.keySet()){
+                    for(String y : pitsaparser.tyybid.get(x)){
+                        System.out.println(x + ": " + y);
+                    }
                 }
+                System.out.println(pitsaparser.showmenu);
+            } catch (Exception ex){
+                changeLog.append(ex.getMessage());
             }
-            System.out.println(pitsaparser.showmenu);
-            changeLog.append(pitsaparser.errorid.toString());
         }
 
     }

@@ -65,14 +65,6 @@ public class PizzaBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements 
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitShow(@NotNull PizzaParser.ShowContext ctx) { return visitChildren(ctx); }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
 	@Override public T visitPizzaR(@NotNull PizzaParser.PizzaRContext ctx) { return visitChildren(ctx); }
 
 	/**
