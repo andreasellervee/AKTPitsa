@@ -201,40 +201,61 @@ public class JPitsa extends JFrame {
         }
 
         public void actionPerformed(ActionEvent e) {
+            changeLog.setText("");
         	String kood = textPane.getText();
         	Map<String, List<String>> menu = new HashMap<String, List<String>>();
+            try{
+                JPitsaMenyyParser pitsaparser = new JPitsaMenyyParser(kood);
+                if(pitsaparser.showmenu){
+                    Aken.run(pitsaparser.pitsad);
+                }
+                if(pitsaparser.showWithI){
+                    Aken.run(pitsaparser.koostisega);
+                }
+                if(pitsaparser.showWithoutI){
+                    Aken.run(pitsaparser.koostiseta);
+                }
+                if(pitsaparser.showWithT){
+                    Aken.run(pitsaparser.tyybiga);
+                }
+                if(pitsaparser.showWithoutT){
+                    Aken.run(pitsaparser.tyybita);
+                }
+            } catch (Exception ex){
+                changeLog.setText(ex.getMessage());
+            }
         	
         	
-        	// Test Map
-        	List<String> a = new ArrayList<String>();
-        	a.add("10");
-        	a.add("Kapsas");
-        	a.add("Porgand");
-        	a.add("Oksad");
-        	menu.put("Jänesepitsa", a);
-        	
-        	List<String> b = new ArrayList<String>();
-        	b.add("8");
-        	b.add("Juust");
-        	b.add("Veel juustu");
-        	b.add("VEEL JUUSTU");
-        	menu.put("Juustupitsa", b);
-        	
-        	List<String> c = new ArrayList<String>();
-        	c.add("9");
-        	c.add("Juust");
-        	c.add("Vorst");
-        	c.add("Pullipeenis");
-        	menu.put("Vorstipitsa", c);
-        	
-        	List<String> d = new ArrayList<String>();
-        	d.add("25");
-        	d.add("Juust(?)");
-        	d.add("Õied");
-        	d.add("Lehed");
-        	menu.put("Kazza", d);
-        	
-        	Aken.run(menu);
+//        	// Test Map
+//        	List<String> a = new ArrayList<String>();
+//        	a.add("10");
+//        	a.add("Kapsas");
+//        	a.add("Porgand");
+//        	a.add("Oksad");
+//        	menu.put("Jänesepitsa", a);
+//
+//        	List<String> b = new ArrayList<String>();
+//        	b.add("8");
+//        	b.add("Juust");
+//        	b.add("Veel juustu");
+//        	b.add("VEEL JUUSTU");
+//        	menu.put("Juustupitsa", b);
+//
+//        	List<String> c = new ArrayList<String>();
+//        	c.add("9");
+//        	c.add("Juust");
+//        	c.add("Vorst");
+//        	c.add("Pullipeenis");
+//        	menu.put("Vorstipitsa", c);
+//
+//        	List<String> d = new ArrayList<String>();
+//        	d.add("25");
+//        	d.add("Juust(?)");
+//        	d.add("Õied");
+//        	d.add("Lehed");
+//        	menu.put("Kazza", d);
+//
+//        	Aken.run(menu);
         }
 
     }

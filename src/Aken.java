@@ -243,7 +243,7 @@ public class Aken extends JFrame {
     private static void createAndShowGUI(Map<String, List<String>> menu) {
         //Create and set up the window.
         final Aken frame = new Aken(menu);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         //Display the window.
         frame.pack();

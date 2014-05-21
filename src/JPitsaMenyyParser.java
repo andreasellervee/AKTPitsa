@@ -1,3 +1,4 @@
+import com.sun.xml.internal.bind.v2.TODO;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.misc.Nullable;
@@ -14,6 +15,9 @@ import java.util.Map;
  */
 
 public class JPitsaMenyyParser {
+    /**
+     * booleaniga saab teada kas show meetodeid kasutati või ei
+     */
 
     String programm;
     boolean showmenu = false;
@@ -71,12 +75,19 @@ public class JPitsaMenyyParser {
         else{
             this.tyybigaString = tyybinimi;
             this.tyybitaString = tyybinimi;
+            System.out.println(tyybid.toString());
             List<String> tyybiKomponendid = tyybid.get(tyybinimi);
+            for(String x : tyybiKomponendid){
+                System.out.println("KOMPONENDID: " + x);
+            }
             tyybiga = new HashMap<String, List<String>>();
             tyybita = new HashMap<String, List<String>>();
+            //TODO
             for(String x : pitsad.keySet()){
                 for(String y : pitsad.get(x)){
+
                     if(tyybiKomponendid.contains(y)){
+                        System.out.println("SISALDAB" + y);
                         if(!tyybiga.containsKey(x)){
                             tyybiga.put(x, pitsad.get(x));
                         }
@@ -255,6 +266,7 @@ public class JPitsaMenyyParser {
             }
             else {
                 this.showWithoutT = true;
+                System.out.println("NÄITA TÜÜBIGA");
                 naitaTyybigaVoiIlma(tree.getChild(1).getText());
             }
         }
