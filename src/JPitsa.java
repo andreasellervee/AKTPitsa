@@ -9,7 +9,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.text.*;
@@ -28,6 +31,11 @@ public class JPitsa extends JFrame {
     String newline = "\n";
     HashMap<Object, Action> actions;
     JFileChooser fc;
+    List<String> a;
+    List<String> b;
+    List<String> c;
+    List<String> d;
+    Aken abc;
 
     //undo helpers
     protected UndoAction undoAction;
@@ -193,20 +201,40 @@ public class JPitsa extends JFrame {
         }
 
         public void actionPerformed(ActionEvent e) {
-            changeLog.setText("");
         	String kood = textPane.getText();
-            try{
-                JPitsaMenyyParser pitsaparser = new JPitsaMenyyParser(kood);
-                System.out.println("Nimi: " + pitsaparser.menuName);
-                for(String x : pitsaparser.tyybid.keySet()){
-                    for(String y : pitsaparser.tyybid.get(x)){
-                        System.out.println(x + ": " + y);
-                    }
-                }
-                System.out.println(pitsaparser.showmenu);
-            } catch (Exception ex){
-                changeLog.append(ex.getMessage());
-            }
+        	Map<String, List<String>> menu = new HashMap<String, List<String>>();
+        	
+        	
+        	// Test Map
+        	List<String> a = new ArrayList<String>();
+        	a.add("10");
+        	a.add("Kapsas");
+        	a.add("Porgand");
+        	a.add("Oksad");
+        	menu.put("Jänesepitsa", a);
+        	
+        	List<String> b = new ArrayList<String>();
+        	b.add("8");
+        	b.add("Juust");
+        	b.add("Veel juustu");
+        	b.add("VEEL JUUSTU");
+        	menu.put("Juustupitsa", b);
+        	
+        	List<String> c = new ArrayList<String>();
+        	c.add("9");
+        	c.add("Juust");
+        	c.add("Vorst");
+        	c.add("Pullipeenis");
+        	menu.put("Vorstipitsa", c);
+        	
+        	List<String> d = new ArrayList<String>();
+        	d.add("25");
+        	d.add("Juust(?)");
+        	d.add("Õied");
+        	d.add("Lehed");
+        	menu.put("Kazza", d);
+        	
+        	Aken.run(menu);
         }
 
     }
@@ -233,7 +261,7 @@ public class JPitsa extends JFrame {
 	            	textPane.setText("");
 					while ((line = in.readLine()) != null) {
 				        textPane.setCaretPosition(textPane.getDocument().getLength());
-					    textPane.replaceSelection(line + "\n");;
+					    textPane.replaceSelection(line + "\n");
 					}
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
@@ -272,7 +300,7 @@ public class JPitsa extends JFrame {
 					writer = new PrintWriter(file.getAbsolutePath(), "UTF-8");
 	                writer.println(textPane.getText());
 	                writer.close();
-				} catch (Exception e1) {
+				} catch (FileNotFoundException | UnsupportedEncodingException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
