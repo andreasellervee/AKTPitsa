@@ -12,7 +12,7 @@ public class Test {
     static List<String> koostisOsadKoos = new ArrayList<String>();
     public static void populate(Map<String, List<String>> map) throws UnexpectedException {
         if(map.size() == 0){
-            throw new UnexpectedException("NO ingredients.");
+            throw new UnexpectedException("Error -> No ingredients.");
         }
         else {
             for(String x : map.keySet()){
@@ -24,14 +24,16 @@ public class Test {
     }
     public static void main (String[] args) throws UnexpectedException {
         try {
-            JPitsaMenyyParser a = new JPitsaMenyyParser("createMenu(); SetMenuName(\"\"); createIngredients(); add new ingredient = {sink, liha}; add new ingredient = {sibul, muu};"
+            JPitsaMenyyParser a = new JPitsaMenyyParser("createMenu(); setMenuName(); createIngredients(); add new ingredient = {sink, liha}; add new ingredient = {sibul, muu};"
                     + "add new ingredient = {tomat, muu};"
                     + "add new ingredient = {salaami, liha};"
                     + "add new pizza = {nimi:Singipitsa, hind:5, add:tomat};"
                     + "add new pizza = {nimi:Juustupitsa, hind: 6, add: sibul};"
-                    + "showWithIngredient(kurk);");
+                    + "showWithIngredient(sibul);"
+                    + "showWithType(muu);");
             System.out.println("Menüü nimi: " + a.menuName);
             populate(a.tyybid);
+            System.out.println("TÜÜBID");
             for(String x : a.tyybid.keySet()){
                 System.out.print(x + ": ");
                 for(String y : a.tyybid.get(x)){
@@ -39,7 +41,7 @@ public class Test {
                 }
                 System.out.println();
             }
-            System.out.println(a.pitsad.toString());
+            System.out.println("PITSAD");
             for(String x : a.pitsad.keySet()){
                 System.out.println("Nimi: " + x);
                 for(int i = 0; i < a.pitsad.get(x).size(); i++){

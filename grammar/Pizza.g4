@@ -5,14 +5,14 @@ pizza
     ;
 
 pizza2
-    :   createM setName? show? createIn addi+ addp* show*?    #Pizza2R
+    :   createM setName? show? createIn addi+ addp* show*    #Pizza2R
     ;
 
 show
-    :   'showWithoutIngredient("'Nimi'");'      #NaitaKoostiseta
+    :   'showWithoutIngredient('Nimi');'      #NaitaKoostiseta
     |   'showWithIngredient('Nimi');'         #NaitaKoostisega
-    |   'showWithoutType("'Nimi'");'            #NaitaTuubita
-    |   'showWithType("'Nimi'");'               #NaitaTuubiga
+    |   'showWithoutType('Nimi');'            #NaitaTuubita
+    |   'showWithType('Nimi');'               #NaitaTuubiga
     |   'showMenu();'                           #NaitaMenuu
     ;
 
@@ -20,7 +20,7 @@ createM
     :   'createMenu();'                         #Loomenuu
     ;
 setName
-    :   'SetMenuName("'Nimi'");'                #MenuuNimi
+    :   'setMenuName('Nimi');'                #MenuuNimi
     ;
 createIn
     :   'createIngredients();'                  #LooKoostis

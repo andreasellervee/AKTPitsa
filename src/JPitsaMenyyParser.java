@@ -1,4 +1,3 @@
-import org.antlr.runtime.MismatchedTokenException;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.misc.Nullable;
@@ -19,9 +18,9 @@ public class JPitsaMenyyParser {
     String programm;
     boolean showmenu = false;
     boolean showWithI = false;
-    String showWithoutI = null;
-    String showWithT = null;
-    String showWithOutT = null;
+    boolean showWithoutI = false;
+    boolean showWithT = false;
+    boolean showWithoutT = false;
 
     String menuName;
 
@@ -61,6 +60,38 @@ public class JPitsaMenyyParser {
         }
     }
 
+    public Map<String, List<String>> tyybiga = null;
+    public Map<String, List<String>> tyybita = null;
+    public String tyybigaString = null;
+    public String tyybitaString = null;
+    public void naitaTyybigaVoiIlma(String tyybinimi) throws UnexpectedException {
+        if(!tyybid.containsKey(tyybinimi)){
+            throw new UnexpectedException("Error -> Sellist komponentide tüübi ei ole (" + tyybinimi + ")");
+        }
+        else{
+            this.tyybigaString = tyybinimi;
+            this.tyybitaString = tyybinimi;
+            List<String> tyybiKomponendid = tyybid.get(tyybinimi);
+            tyybiga = new HashMap<String, List<String>>();
+            tyybita = new HashMap<String, List<String>>();
+            for(String x : pitsad.keySet()){
+                for(String y : pitsad.get(x)){
+                    if(tyybiKomponendid.contains(y)){
+                        if(!tyybiga.containsKey(x)){
+                            tyybiga.put(x, pitsad.get(x));
+                        }
+                    }
+                    else {
+                        if(!tyybita.containsKey(x)){
+                            tyybita.put(x, pitsad.get(x));
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
     private void ingredientsInPizzas() throws UnexpectedException {
         for(String x : pitsad.keySet()){
             for(int i = 1; i < pitsad.get(x).size(); i++){
@@ -93,7 +124,7 @@ public class JPitsaMenyyParser {
             ingredientsInPizzas();
     }
 
-    private void puuRonimine(ParseTree tree){
+    private void puuRonimine(ParseTree tree) throws UnexpectedException {
         if(tree instanceof PizzaParser.PizzaRContext){
             puuRonimine(tree.getChild(0));
         }
@@ -123,7 +154,9 @@ public class JPitsaMenyyParser {
         }
 
         else if(tree instanceof PizzaParser.LooKoostisContext){
-
+            if(!tree.getText().equals("createIngredients();")){
+                throw new UnexpectedException("Error -> ootasin createIngredients(); aga sain -> " + tree.getText());
+            }
         }
 
         else if(tree instanceof PizzaParser.LisaKoostisListiContext){
@@ -168,12 +201,22 @@ public class JPitsaMenyyParser {
         }
 
         else if(tree instanceof PizzaParser.NaitaKoostisetaContext){
+            if(tree.getChild(1).getText().equals("<missing Nimi>")){
+                throw new IllegalArgumentException("Error -> showWithoutIngredient(); peab võtma ühe argumendiks komponendi nime");
+            }
+            else if (tree.getChild(0).getText().equals("showWithoutIngredient(") == false
+                    || tree.getChild(2).getText().equals(");") == false){
+                throw new IllegalArgumentException("Error -> ootasin showWithoutIngredient(komponent); aga sain -> " + tree.getText());
+            }
+            else {
+                this.showWithoutI = true;
+                naitaKoostisegaVoiIlma(tree.getChild(1).getText());
+            }
 
         }
 
         else if(tree instanceof PizzaParser.NaitaKoostisegaContext){
             //0 1 2
-            System.out.println(tree.getChild(0).equals("showWithIngredient("));
             if(tree.getChild(1).getText().equals("<missing Nimi>")){
                 throw new IllegalArgumentException("Error -> showWithIngredient(); peab võtma ühe argumendiks komponendi nime");
             }
@@ -189,11 +232,31 @@ public class JPitsaMenyyParser {
         }
 
         else if(tree instanceof PizzaParser.NaitaTuubigaContext){
-
+            if(tree.getChild(1).getText().equals("<missing Nimi>")){
+                throw new IllegalArgumentException("Error -> showWithType(); peab võtma ühe argumendiks tüübi nime");
+            }
+            else if (tree.getChild(0).getText().equals("showWithType(") == false
+                    || tree.getChild(2).getText().equals(");") == false){
+                throw new IllegalArgumentException("Error -> ootasin showWithType(tüüp); aga sain -> " + tree.getText());
+            }
+            else {
+                this.showWithT = true;
+                naitaTyybigaVoiIlma(tree.getChild(1).getText());
+            }
         }
 
         else if(tree instanceof PizzaParser.NaitaTuubitaContext){
-
+            if(tree.getChild(1).getText().equals("<missing Nimi>")){
+                throw new IllegalArgumentException("Error -> showWithoutType(); peab võtma ühe argumendiks tüübi nime");
+            }
+            else if (tree.getChild(0).getText().equals("showWithoutType(") == false
+                    || tree.getChild(2).getText().equals(");") == false){
+                throw new IllegalArgumentException("Error -> ootasin showWithoutType(tüüp); aga sain -> " + tree.getText());
+            }
+            else {
+                this.showWithoutT = true;
+                naitaTyybigaVoiIlma(tree.getChild(1).getText());
+            }
         }
 
         else {

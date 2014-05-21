@@ -1,4 +1,4 @@
-// Generated from C:/Users/Andreas/Documents/kool/automaadid translaatorid/Projekt/grammar\Pizza.g4 by ANTLR 4.x
+// Generated from C:/Veebirakendused/New folder/Pizza/grammar\Pizza.g4 by ANTLR 4.x
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -14,15 +14,15 @@ public class PizzaParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__20=1, T__19=2, T__18=3, T__17=4, T__16=5, T__15=6, T__14=7, T__13=8, 
-		T__12=9, T__11=10, T__10=11, T__9=12, T__8=13, T__7=14, T__6=15, T__5=16, 
-		T__4=17, T__3=18, T__2=19, T__1=20, T__0=21, Nimi=22, Arv=23, WS=24;
+		T__19=1, T__18=2, T__17=3, T__16=4, T__15=5, T__14=6, T__13=7, T__12=8, 
+		T__11=9, T__10=10, T__9=11, T__8=12, T__7=13, T__6=14, T__5=15, T__4=16, 
+		T__3=17, T__2=18, T__1=19, T__0=20, Nimi=21, Arv=22, WS=23;
 	public static final String[] tokenNames = {
-		"<INVALID>", "'showMenu();'", "','", "'showWithType(\"'", "'createMenu();'", 
-		"'showWithIngredient('", "');'", "'showWithoutIngredient(\"'", "':'", 
-		"'='", "';'", "'SetMenuName(\"'", "'add new pizza'", "'hind:'", "'{'", 
-		"'nimi'", "'showWithoutType(\"'", "'add new ingredient'", "'add'", "'}'", 
-		"'createIngredients();'", "'\");'", "Nimi", "Arv", "WS"
+		"<INVALID>", "'showMenu();'", "'showWithoutIngredient('", "','", "'createMenu();'", 
+		"'showWithIngredient('", "'setMenuName('", "'showWithType('", "');'", 
+		"':'", "'='", "';'", "'add new pizza'", "'hind:'", "'{'", "'showWithoutType('", 
+		"'nimi'", "'add new ingredient'", "'add'", "'}'", "'createIngredients();'", 
+		"Nimi", "Arv", "WS"
 	};
 	public static final int
 		RULE_pizza = 0, RULE_pizza2 = 1, RULE_show = 2, RULE_createM = 3, RULE_setName = 4, 
@@ -163,14 +163,13 @@ public class PizzaParser extends Parser {
 		enterRule(_localctx, 2, RULE_pizza2);
 		int _la;
 		try {
-			int _alt;
 			_localctx = new Pizza2RContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(20); createM();
 			setState(22);
 			_la = _input.LA(1);
-			if (_la==T__10) {
+			if (_la==6) {
 				{
 				setState(21); setName();
 				}
@@ -178,7 +177,7 @@ public class PizzaParser extends Parser {
 
 			setState(25);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__20) | (1L << T__18) | (1L << T__16) | (1L << T__14) | (1L << T__5))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << 1) | (1L << 2) | (1L << 5) | (1L << 7) | (1L << 15))) != 0)) {
 				{
 				setState(24); show();
 				}
@@ -197,11 +196,11 @@ public class PizzaParser extends Parser {
 				setState(31); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==T__4 );
+			} while ( _la==17 );
 			setState(36);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==T__9) {
+			while (_la==12) {
 				{
 				{
 				setState(33); addp();
@@ -213,18 +212,16 @@ public class PizzaParser extends Parser {
 			}
 			setState(42);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
-			while ( _alt!=1 && _alt!=ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1+1 ) {
-					{
-					{
-					setState(39); show();
-					}
-					} 
+			_la = _input.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << 1) | (1L << 2) | (1L << 5) | (1L << 7) | (1L << 15))) != 0)) {
+				{
+				{
+				setState(39); show();
+				}
 				}
 				setState(44);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,4,_ctx);
+				_la = _input.LA(1);
 			}
 			}
 		}
@@ -341,47 +338,47 @@ public class PizzaParser extends Parser {
 		try {
 			setState(58);
 			switch (_input.LA(1)) {
-			case T__14:
+			case 2:
 				_localctx = new NaitaKoostisetaContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(45); match(T__14);
+				setState(45); match(2);
 				setState(46); match(Nimi);
-				setState(47); match(T__0);
+				setState(47); match(8);
 				}
 				break;
-			case T__16:
+			case 5:
 				_localctx = new NaitaKoostisegaContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(48); match(T__16);
+				setState(48); match(5);
 				setState(49); match(Nimi);
-				setState(50); match(T__15);
+				setState(50); match(8);
 				}
 				break;
-			case T__5:
+			case 15:
 				_localctx = new NaitaTuubitaContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(51); match(T__5);
+				setState(51); match(15);
 				setState(52); match(Nimi);
-				setState(53); match(T__0);
+				setState(53); match(8);
 				}
 				break;
-			case T__18:
+			case 7:
 				_localctx = new NaitaTuubigaContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(54); match(T__18);
+				setState(54); match(7);
 				setState(55); match(Nimi);
-				setState(56); match(T__0);
+				setState(56); match(8);
 				}
 				break;
-			case T__20:
+			case 1:
 				_localctx = new NaitaMenuuContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(57); match(T__20);
+				setState(57); match(1);
 				}
 				break;
 			default:
@@ -434,7 +431,7 @@ public class PizzaParser extends Parser {
 			_localctx = new LoomenuuContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60); match(T__17);
+			setState(60); match(4);
 			}
 		}
 		catch (RecognitionException re) {
@@ -484,9 +481,9 @@ public class PizzaParser extends Parser {
 			_localctx = new MenuuNimiContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(62); match(T__10);
+			setState(62); match(6);
 			setState(63); match(Nimi);
-			setState(64); match(T__0);
+			setState(64); match(8);
 			}
 		}
 		catch (RecognitionException re) {
@@ -535,7 +532,7 @@ public class PizzaParser extends Parser {
 			_localctx = new LooKoostisContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(66); match(T__1);
+			setState(66); match(20);
 			}
 		}
 		catch (RecognitionException re) {
@@ -588,14 +585,14 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaKoostisListiContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(68); match(T__4);
-			setState(69); match(T__12);
-			setState(70); match(T__7);
+			setState(68); match(17);
+			setState(69); match(10);
+			setState(70); match(14);
 			setState(71); match(Nimi);
-			setState(72); match(T__19);
+			setState(72); match(3);
 			setState(73); match(Nimi);
-			setState(74); match(T__2);
-			setState(75); match(T__11);
+			setState(74); match(19);
+			setState(75); match(11);
 			}
 		}
 		catch (RecognitionException re) {
@@ -653,16 +650,16 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaPitsaContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(77); match(T__9);
-			setState(78); match(T__12);
-			setState(79); match(T__7);
-			setState(80); match(T__6);
-			setState(81); match(T__13);
+			setState(77); match(12);
+			setState(78); match(10);
+			setState(79); match(14);
+			setState(80); match(16);
+			setState(81); match(9);
 			setState(82); match(Nimi);
-			setState(83); match(T__19);
-			setState(84); match(T__8);
+			setState(83); match(3);
+			setState(84); match(13);
 			setState(85); match(Arv);
-			setState(86); match(T__19);
+			setState(86); match(3);
 			setState(87); add();
 			setState(92);
 			_errHandler.sync(this);
@@ -671,7 +668,7 @@ public class PizzaParser extends Parser {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(88); match(T__19);
+					setState(88); match(3);
 					setState(89); add();
 					}
 					} 
@@ -680,8 +677,8 @@ public class PizzaParser extends Parser {
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,6,_ctx);
 			}
-			setState(95); match(T__2);
-			setState(96); match(T__11);
+			setState(95); match(19);
+			setState(96); match(11);
 			}
 		}
 		catch (RecognitionException re) {
@@ -731,8 +728,8 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaKoostisContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(98); match(T__3);
-			setState(99); match(T__13);
+			setState(98); match(18);
+			setState(99); match(9);
 			setState(100); match(Nimi);
 			}
 		}
@@ -748,31 +745,31 @@ public class PizzaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\32i\4\2\t\2\4\3\t"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\31i\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\3"+
 		"\3\3\5\3\31\n\3\3\3\5\3\34\n\3\3\3\3\3\6\3 \n\3\r\3\16\3!\3\3\7\3%\n\3"+
 		"\f\3\16\3(\13\3\3\3\7\3+\n\3\f\3\16\3.\13\3\3\4\3\4\3\4\3\4\3\4\3\4\3"+
 		"\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4=\n\4\3\5\3\5\3\6\3\6\3\6\3\6\3\7\3\7\3"+
 		"\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t"+
 		"\3\t\3\t\3\t\3\t\7\t]\n\t\f\t\16\t`\13\t\3\t\3\t\3\t\3\n\3\n\3\n\3\n\3"+
-		"\n\4,^\2\13\2\4\6\b\n\f\16\20\22\2\2i\2\24\3\2\2\2\4\26\3\2\2\2\6<\3\2"+
+		"\n\3^\2\13\2\4\6\b\n\f\16\20\22\2\2i\2\24\3\2\2\2\4\26\3\2\2\2\6<\3\2"+
 		"\2\2\b>\3\2\2\2\n@\3\2\2\2\fD\3\2\2\2\16F\3\2\2\2\20O\3\2\2\2\22d\3\2"+
 		"\2\2\24\25\5\4\3\2\25\3\3\2\2\2\26\30\5\b\5\2\27\31\5\n\6\2\30\27\3\2"+
 		"\2\2\30\31\3\2\2\2\31\33\3\2\2\2\32\34\5\6\4\2\33\32\3\2\2\2\33\34\3\2"+
 		"\2\2\34\35\3\2\2\2\35\37\5\f\7\2\36 \5\16\b\2\37\36\3\2\2\2 !\3\2\2\2"+
 		"!\37\3\2\2\2!\"\3\2\2\2\"&\3\2\2\2#%\5\20\t\2$#\3\2\2\2%(\3\2\2\2&$\3"+
 		"\2\2\2&\'\3\2\2\2\',\3\2\2\2(&\3\2\2\2)+\5\6\4\2*)\3\2\2\2+.\3\2\2\2,"+
-		"-\3\2\2\2,*\3\2\2\2-\5\3\2\2\2.,\3\2\2\2/\60\7\t\2\2\60\61\7\30\2\2\61"+
-		"=\7\27\2\2\62\63\7\7\2\2\63\64\7\30\2\2\64=\7\b\2\2\65\66\7\22\2\2\66"+
-		"\67\7\30\2\2\67=\7\27\2\289\7\5\2\29:\7\30\2\2:=\7\27\2\2;=\7\3\2\2</"+
-		"\3\2\2\2<\62\3\2\2\2<\65\3\2\2\2<8\3\2\2\2<;\3\2\2\2=\7\3\2\2\2>?\7\6"+
-		"\2\2?\t\3\2\2\2@A\7\r\2\2AB\7\30\2\2BC\7\27\2\2C\13\3\2\2\2DE\7\26\2\2"+
-		"E\r\3\2\2\2FG\7\23\2\2GH\7\13\2\2HI\7\20\2\2IJ\7\30\2\2JK\7\4\2\2KL\7"+
-		"\30\2\2LM\7\25\2\2MN\7\f\2\2N\17\3\2\2\2OP\7\16\2\2PQ\7\13\2\2QR\7\20"+
-		"\2\2RS\7\21\2\2ST\7\n\2\2TU\7\30\2\2UV\7\4\2\2VW\7\17\2\2WX\7\31\2\2X"+
-		"Y\7\4\2\2Y^\5\22\n\2Z[\7\4\2\2[]\5\22\n\2\\Z\3\2\2\2]`\3\2\2\2^_\3\2\2"+
-		"\2^\\\3\2\2\2_a\3\2\2\2`^\3\2\2\2ab\7\25\2\2bc\7\f\2\2c\21\3\2\2\2de\7"+
-		"\24\2\2ef\7\n\2\2fg\7\30\2\2g\23\3\2\2\2\t\30\33!&,<^";
+		"*\3\2\2\2,-\3\2\2\2-\5\3\2\2\2.,\3\2\2\2/\60\7\4\2\2\60\61\7\27\2\2\61"+
+		"=\7\n\2\2\62\63\7\7\2\2\63\64\7\27\2\2\64=\7\n\2\2\65\66\7\21\2\2\66\67"+
+		"\7\27\2\2\67=\7\n\2\289\7\t\2\29:\7\27\2\2:=\7\n\2\2;=\7\3\2\2</\3\2\2"+
+		"\2<\62\3\2\2\2<\65\3\2\2\2<8\3\2\2\2<;\3\2\2\2=\7\3\2\2\2>?\7\6\2\2?\t"+
+		"\3\2\2\2@A\7\b\2\2AB\7\27\2\2BC\7\n\2\2C\13\3\2\2\2DE\7\26\2\2E\r\3\2"+
+		"\2\2FG\7\23\2\2GH\7\f\2\2HI\7\20\2\2IJ\7\27\2\2JK\7\5\2\2KL\7\27\2\2L"+
+		"M\7\25\2\2MN\7\r\2\2N\17\3\2\2\2OP\7\16\2\2PQ\7\f\2\2QR\7\20\2\2RS\7\22"+
+		"\2\2ST\7\13\2\2TU\7\27\2\2UV\7\5\2\2VW\7\17\2\2WX\7\30\2\2XY\7\5\2\2Y"+
+		"^\5\22\n\2Z[\7\5\2\2[]\5\22\n\2\\Z\3\2\2\2]`\3\2\2\2^_\3\2\2\2^\\\3\2"+
+		"\2\2_a\3\2\2\2`^\3\2\2\2ab\7\25\2\2bc\7\r\2\2c\21\3\2\2\2de\7\24\2\2e"+
+		"f\7\13\2\2fg\7\27\2\2g\23\3\2\2\2\t\30\33!&,<^";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
