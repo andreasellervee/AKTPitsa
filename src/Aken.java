@@ -208,16 +208,16 @@ public class Aken extends JFrame {
 //			        	textPane.replaceSelection(x);
 			            for(String y : map.get(x)){
 			            	if(count == 0){
-			            		prinditav = prinditav + "<td>" + y + " EUR</td> \n </tr> \n <tr> \n";
+			            		prinditav = prinditav + "<td>" + y + " EUR</td> \n </tr> \n <tr> \n <td>      ";
 //			            		textPane.replaceSelection("\t \t \t" + y + "EUR" + "\n    ");
 			            	}
 			            	else{
-			            		prinditav = prinditav + "<td>" + y + "</td> \n";
+			            		prinditav = prinditav + y + "   ";
 //			            	textPane.replaceSelection(y + "   ");
 			            	}
 			            	count ++;
 			            }
-			            prinditav = prinditav + "<tr></tr>";
+			            prinditav = prinditav + "</td><tr></tr>";
 			            
 //			            textPane.replaceSelection("\n\n\n");
 			        }
