@@ -1,4 +1,4 @@
-// Generated from C:/Veebirakendused/New folder/Pizza/grammar\Pizza.g4 by ANTLR 4.x
+// Generated from C:/Users/Andreas/Documents/kool/automaadid translaatorid/Projekt/grammar\Pizza.g4 by ANTLR 4.x
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -169,7 +169,7 @@ public class PizzaParser extends Parser {
 			setState(20); createM();
 			setState(22);
 			_la = _input.LA(1);
-			if (_la==6) {
+			if (_la==T__14) {
 				{
 				setState(21); setName();
 				}
@@ -177,7 +177,7 @@ public class PizzaParser extends Parser {
 
 			setState(25);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << 1) | (1L << 2) | (1L << 5) | (1L << 7) | (1L << 15))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__19) | (1L << T__18) | (1L << T__15) | (1L << T__13) | (1L << T__5))) != 0)) {
 				{
 				setState(24); show();
 				}
@@ -196,11 +196,11 @@ public class PizzaParser extends Parser {
 				setState(31); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( _la==17 );
+			} while ( _la==T__3 );
 			setState(36);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (_la==12) {
+			while (_la==T__8) {
 				{
 				{
 				setState(33); addp();
@@ -213,7 +213,7 @@ public class PizzaParser extends Parser {
 			setState(42);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << 1) | (1L << 2) | (1L << 5) | (1L << 7) | (1L << 15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__19) | (1L << T__18) | (1L << T__15) | (1L << T__13) | (1L << T__5))) != 0)) {
 				{
 				{
 				setState(39); show();
@@ -338,47 +338,47 @@ public class PizzaParser extends Parser {
 		try {
 			setState(58);
 			switch (_input.LA(1)) {
-			case 2:
+			case T__18:
 				_localctx = new NaitaKoostisetaContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(45); match(2);
+				setState(45); match(T__18);
 				setState(46); match(Nimi);
-				setState(47); match(8);
+				setState(47); match(T__12);
 				}
 				break;
-			case 5:
+			case T__15:
 				_localctx = new NaitaKoostisegaContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(48); match(5);
+				setState(48); match(T__15);
 				setState(49); match(Nimi);
-				setState(50); match(8);
+				setState(50); match(T__12);
 				}
 				break;
-			case 15:
+			case T__5:
 				_localctx = new NaitaTuubitaContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(51); match(15);
+				setState(51); match(T__5);
 				setState(52); match(Nimi);
-				setState(53); match(8);
+				setState(53); match(T__12);
 				}
 				break;
-			case 7:
+			case T__13:
 				_localctx = new NaitaTuubigaContext(_localctx);
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(54); match(7);
+				setState(54); match(T__13);
 				setState(55); match(Nimi);
-				setState(56); match(8);
+				setState(56); match(T__12);
 				}
 				break;
-			case 1:
+			case T__19:
 				_localctx = new NaitaMenuuContext(_localctx);
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(57); match(1);
+				setState(57); match(T__19);
 				}
 				break;
 			default:
@@ -431,7 +431,7 @@ public class PizzaParser extends Parser {
 			_localctx = new LoomenuuContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60); match(4);
+			setState(60); match(T__16);
 			}
 		}
 		catch (RecognitionException re) {
@@ -481,9 +481,9 @@ public class PizzaParser extends Parser {
 			_localctx = new MenuuNimiContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(62); match(6);
+			setState(62); match(T__14);
 			setState(63); match(Nimi);
-			setState(64); match(8);
+			setState(64); match(T__12);
 			}
 		}
 		catch (RecognitionException re) {
@@ -532,7 +532,7 @@ public class PizzaParser extends Parser {
 			_localctx = new LooKoostisContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(66); match(20);
+			setState(66); match(T__0);
 			}
 		}
 		catch (RecognitionException re) {
@@ -585,14 +585,14 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaKoostisListiContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(68); match(17);
-			setState(69); match(10);
-			setState(70); match(14);
+			setState(68); match(T__3);
+			setState(69); match(T__10);
+			setState(70); match(T__6);
 			setState(71); match(Nimi);
-			setState(72); match(3);
+			setState(72); match(T__17);
 			setState(73); match(Nimi);
-			setState(74); match(19);
-			setState(75); match(11);
+			setState(74); match(T__1);
+			setState(75); match(T__9);
 			}
 		}
 		catch (RecognitionException re) {
@@ -650,16 +650,16 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaPitsaContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(77); match(12);
-			setState(78); match(10);
-			setState(79); match(14);
-			setState(80); match(16);
-			setState(81); match(9);
+			setState(77); match(T__8);
+			setState(78); match(T__10);
+			setState(79); match(T__6);
+			setState(80); match(T__4);
+			setState(81); match(T__11);
 			setState(82); match(Nimi);
-			setState(83); match(3);
-			setState(84); match(13);
+			setState(83); match(T__17);
+			setState(84); match(T__7);
 			setState(85); match(Arv);
-			setState(86); match(3);
+			setState(86); match(T__17);
 			setState(87); add();
 			setState(92);
 			_errHandler.sync(this);
@@ -668,7 +668,7 @@ public class PizzaParser extends Parser {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(88); match(3);
+					setState(88); match(T__17);
 					setState(89); add();
 					}
 					} 
@@ -677,8 +677,8 @@ public class PizzaParser extends Parser {
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,6,_ctx);
 			}
-			setState(95); match(19);
-			setState(96); match(11);
+			setState(95); match(T__1);
+			setState(96); match(T__9);
 			}
 		}
 		catch (RecognitionException re) {
@@ -728,8 +728,8 @@ public class PizzaParser extends Parser {
 			_localctx = new LisaKoostisContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(98); match(18);
-			setState(99); match(9);
+			setState(98); match(T__2);
+			setState(99); match(T__11);
 			setState(100); match(Nimi);
 			}
 		}

@@ -1,4 +1,4 @@
-// Generated from C:/Veebirakendused/New folder/Pizza/grammar\Pizza.g4 by ANTLR 4.x
+// Generated from C:/Users/Andreas/Documents/kool/automaadid translaatorid/Projekt/grammar\Pizza.g4 by ANTLR 4.x
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -22,12 +22,10 @@ public class PizzaLexer extends Lexer {
 	};
 
 	public static final String[] tokenNames = {
-		"<INVALID>",
-		"'showMenu();'", "'showWithoutIngredient('", "','", "'createMenu();'", 
-		"'showWithIngredient('", "'setMenuName('", "'showWithType('", "');'", 
-		"':'", "'='", "';'", "'add new pizza'", "'hind:'", "'{'", "'showWithoutType('", 
-		"'nimi'", "'add new ingredient'", "'add'", "'}'", "'createIngredients();'", 
-		"Nimi", "Arv", "WS"
+		"'\\u0000'", "'\\u0001'", "'\\u0002'", "'\\u0003'", "'\\u0004'", "'\\u0005'", 
+		"'\\u0006'", "'\\u0007'", "'\b'", "'\t'", "'\n'", "'\\u000B'", "'\f'", 
+		"'\r'", "'\\u000E'", "'\\u000F'", "'\\u0010'", "'\\u0011'", "'\\u0012'", 
+		"'\\u0013'", "'\\u0014'", "'\\u0015'", "'\\u0016'", "'\\u0017'"
 	};
 	public static final String[] ruleNames = {
 		"T__19", "T__18", "T__17", "T__16", "T__15", "T__14", "T__13", "T__12", 

@@ -5,10 +5,7 @@ import org.antlr.v4.runtime.misc.Nullable;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 import java.rmi.UnexpectedException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Andreas on 7.05.2014.
@@ -57,9 +54,11 @@ public class JPitsaMenyyParser {
                 if(y.equals(komponent)){
                     koostisega.put(x, pitsad.get(x));
                 }
-                else {
-                    koostiseta.put(x, pitsad.get(x));
-                }
+            }
+        }
+        for(String x : pitsad.keySet()){
+            if(!koostisega.containsKey(x)){
+                koostiseta.put(x, pitsad.get(x));
             }
         }
     }
@@ -67,37 +66,36 @@ public class JPitsaMenyyParser {
     public Map<String, List<String>> tyybiga = null;
     public Map<String, List<String>> tyybita = null;
     public String tyybigaString = null;
-    public String tyybitaString = null;
     public void naitaTyybigaVoiIlma(String tyybinimi) throws UnexpectedException {
         if(!tyybid.containsKey(tyybinimi)){
             throw new UnexpectedException("Error -> Sellist komponentide tüübi ei ole (" + tyybinimi + ")");
         }
         else{
             this.tyybigaString = tyybinimi;
-            this.tyybitaString = tyybinimi;
             System.out.println(tyybid.toString());
             List<String> tyybiKomponendid = tyybid.get(tyybinimi);
             for(String x : tyybiKomponendid){
                 System.out.println("KOMPONENDID: " + x);
             }
             tyybiga = new HashMap<String, List<String>>();
-            tyybita = new HashMap<String, List<String>>();
             //TODO
             for(String x : pitsad.keySet()){
                 for(String y : pitsad.get(x)){
 
                     if(tyybiKomponendid.contains(y)){
-                        System.out.println("SISALDAB" + y);
+                        System.out.println(x + " SISALDAB "  + y);
                         if(!tyybiga.containsKey(x)){
+                            System.out.println("TÜÜBIGA: " + x);
                             tyybiga.put(x, pitsad.get(x));
                         }
                     }
-                    else {
-                        if(!tyybita.containsKey(x)){
-                            tyybita.put(x, pitsad.get(x));
-                        }
-                    }
-
+                }
+            }
+            tyybita = new HashMap<String, List<String>>();
+            for(String x : pitsad.keySet()){
+                if(!tyybiga.containsKey(x)){
+                    tyybita.put(x, pitsad.get(x));
+                    System.out.println("TÜÜBITA: " + x);
                 }
             }
         }
@@ -187,6 +185,9 @@ public class JPitsaMenyyParser {
         else if(tree instanceof PizzaParser.LisaPitsaContext){
             //6 - nimi, 9 - hind, 11, 13, 15, ... va 2 viimast
             String pitsanimi = tree.getChild(5).getText();
+            if(!tree.getChild(7).getText().equals("hind:")){
+                throw new UnexpectedException("Error -> ootasin hind: , aga sain -> " + tree.getChild(7).getText());
+            }
             String pitsahind = tree.getChild(8).getText();
             a = new ArrayList<String>();
             a.add(pitsahind);
@@ -272,7 +273,7 @@ public class JPitsaMenyyParser {
         }
 
         else {
-            System.out.println("Else: " + tree.getText());
+            throw new IllegalArgumentException("Error -> Midagi ootamatut");
         }
     }
 

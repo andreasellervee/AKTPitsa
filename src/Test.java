@@ -27,43 +27,14 @@ public class Test {
             JPitsaMenyyParser a = new JPitsaMenyyParser("createMenu(); setMenuName(); createIngredients(); add new ingredient = {sink, liha}; add new ingredient = {sibul, muu};"
                     + "add new ingredient = {tomat, muu};"
                     + "add new ingredient = {salaami, liha};"
-                    + "add new pizza = {nimi:Singipitsa, hind:5, add:tomat};"
-                    + "add new pizza = {nimi:Juustupitsa, hind: 6, add: sibul};"
+                    + "add new pizza = {nimi:Tomatipitsa, hind:5, add:tomat, add:sibul};"
+                    + "add new pizza = {nimi:T, hind:5, add:tomat};" +
+                    "add new pizza = {nimi:S, hind:5, add:sink};"
+                    + "add new pizza = {nimi:Singipitsa, hind: 6, add: sink};"
                     + "showWithIngredient(sibul);"
                     + "showWithType(muu);");
-            System.out.println("Menüü nimi: " + a.menuName);
-            populate(a.tyybid);
-            System.out.println("TÜÜBID");
-            for(String x : a.tyybid.keySet()){
-                System.out.print(x + ": ");
-                for(String y : a.tyybid.get(x)){
-                    System.out.print(y + " ");
-                }
-                System.out.println();
-            }
-            System.out.println("PITSAD");
-            for(String x : a.pitsad.keySet()){
-                System.out.println("Nimi: " + x);
-                for(int i = 0; i < a.pitsad.get(x).size(); i++){
-                    if(i == 0){
-                        System.out.println("    Hind: " + a.pitsad.get(x).get(i));
-                        System.out.println("    Komponendid:");
-                    }
-                    else{
-                        System.out.println("        " + a.pitsad.get(x).get(i));
-                    }
-                }
-            }
-            if(a.showWithI){
-                if(a.koostisega.size() == 0){
-                    throw new UnexpectedException("Error -> Ühelgi pitsal pole komponenti " + a.koostisegaString);
-                }
-                else {
-                    System.out.println("Pitsa(d) komponendiga " + a.koostisegaString + " : ");
-                    for(String x : a.koostisega.keySet()){
-                        System.out.println(x);
-                    }
-                }
+            if(a.showWithoutT){
+
             }
         } catch (Exception e){
             System.out.println(e.getMessage());

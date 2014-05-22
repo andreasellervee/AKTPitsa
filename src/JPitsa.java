@@ -197,6 +197,7 @@ public class JPitsa extends JFrame {
     class RunAction extends AbstractAction {
         public RunAction() {
             super("Run");
+            changeLog.setText("TERETULEMAST JPitsaMenüüsse!!");
             setEnabled(true);
         }
 
