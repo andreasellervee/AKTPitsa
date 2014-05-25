@@ -201,23 +201,25 @@ public class Aken extends JFrame {
 				try {
 					writer = new PrintWriter(path, "UTF-8");
 					String sisu = textPane.getText();
-					String prinditav = "<!DOCTYPE html> \n <html> \n <head> \n <meta charset='UTF-8'> \n </head> \n <body> \n \n <table style='width:300px'>";
+					String hind = "";
+					String prinditav = "<!DOCTYPE html> \n <html> \n <head> \n <meta charset='UTF-8'> \n<style> \n table,td,th{border:1px solid black;} \n table {width:100%;position:absolute;left:25%;} \n th{height:50px;} </style> \n </head> \n <body> \n \n <table style='width:50%; text-align:center;'> \n <tr> \n <th>Pitsa</th> \n <th>Komponendid</th> \n <th>Hind</th> \n </tr>" ;
 					for(String x : map.keySet()){
 			        	int count = 0;
 			        	prinditav = prinditav + "<tr> \n <td>" + x +"</td> \n <td> </td> \n ";
 //			        	textPane.replaceSelection(x);
 			            for(String y : map.get(x)){
 			            	if(count == 0){
-			            		prinditav = prinditav + "<td>" + y + " EUR</td> \n </tr> \n <tr> \n <td>      ";
+			            		hind = y;
+			            		prinditav = prinditav + "<td>";
 //			            		textPane.replaceSelection("\t \t \t" + y + "EUR" + "\n    ");
 			            	}
 			            	else{
-			            		prinditav = prinditav + y + "   ";
+			            		prinditav = prinditav + y + ",   ";
 //			            	textPane.replaceSelection(y + "   ");
 			            	}
 			            	count ++;
 			            }
-			            prinditav = prinditav + "</td><tr></tr>";
+			            prinditav = prinditav + "</td><td>"+hind+"EUR</tr>";
 			            
 //			            textPane.replaceSelection("\n\n\n");
 			        }
