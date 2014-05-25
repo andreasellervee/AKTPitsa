@@ -205,7 +205,7 @@ public class Aken extends JFrame {
 					String prinditav = "<!DOCTYPE html> \n <html> \n <head> \n <meta charset='UTF-8'> \n<style> \n table,td,th{border:1px solid black;} \n table {width:100%;position:absolute;left:25%;} \n th{height:50px;} </style> \n </head> \n <body> \n \n <table style='width:50%; text-align:center;'> \n <tr> \n <th>Pitsa</th> \n <th>Komponendid</th> \n <th>Hind</th> \n </tr>" ;
 					for(String x : map.keySet()){
 			        	int count = 0;
-			        	prinditav = prinditav + "<tr> \n <td>" + x +"</td> \n <td> </td> \n ";
+			        	prinditav = prinditav + "<tr> \n <td>" + x +"</td> \n";
 //			        	textPane.replaceSelection(x);
 			            for(String y : map.get(x)){
 			            	if(count == 0){
