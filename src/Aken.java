@@ -219,7 +219,8 @@ public class Aken extends JFrame {
 			            	}
 			            	count ++;
 			            }
-			            prinditav = prinditav + "</td><td>"+hind+"EUR</tr>";
+                        prinditav = prinditav.substring(0, prinditav.length()-4);
+                        prinditav = prinditav + "</td><td>"+hind+"EUR</tr>";
 			            
 //			            textPane.replaceSelection("\n\n\n");
 			        }

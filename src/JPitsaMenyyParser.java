@@ -12,9 +12,15 @@ import java.util.*;
  */
 
 public class JPitsaMenyyParser {
-    /**
-     * booleaniga saab teada kas show meetodeid kasutati või ei
-     */
+
+    public static boolean isNumeric(String str){
+        try {
+            double d = Double.parseDouble(str);
+        } catch(NumberFormatException e){
+            return false;
+        }
+        return true;
+    }
 
     String programm;
     boolean showmenu = false;
@@ -164,7 +170,7 @@ public class JPitsaMenyyParser {
 
         else if(tree instanceof PizzaParser.LooKoostisContext){
             if(!tree.getText().equals("createIngredients();")){
-                throw new UnexpectedException("Error -> ootasin createIngredients(); aga sain -> " + tree.getText());
+                throw new UnexpectedException("Error -> ootasin createIngredients(); aga sain -> " + tree.getText() + ". " + programm.indexOf(tree.getText()));
             }
         }
 
@@ -188,18 +194,35 @@ public class JPitsaMenyyParser {
             if(!tree.getChild(7).getText().equals("hind:")){
                 throw new UnexpectedException("Error -> ootasin hind: , aga sain -> " + tree.getChild(7).getText());
             }
+            if(tree.getChild(8).getText().equals("<missing Arv>")){
+                throw new UnexpectedException("Error -> Puudub hind.");
+            }
+            if(!isNumeric(tree.getChild(8).getText())){
+                throw new UnexpectedException("Error -> " + tree.getChild(8).getText() + " ei ole number");
+            }
             String pitsahind = tree.getChild(8).getText();
             a = new ArrayList<String>();
             a.add(pitsahind);
             for(int i = 10; i < tree.getChildCount() - 2; i = i + 2){
                 ParseTree tree2 = tree.getChild(i);
-                a.add(tree2.getChild(2).getText());
+                System.out.println(tree2.getText());
+                if(tree2 instanceof PizzaParser.LisaKoostisContext){
+                    if(!tree2.getChild(0).getText().equals("add")
+                            || !tree2.getChild(1).getText().equals(":")){
+                        throw new UnexpectedException("Error -> Ootasin add:komponent aga sain -> " + tree2.getText());
+                    }
+                    else if(tree2.getChild(2).getText().equals("<missing Nimi>")){
+                        throw new UnexpectedException("Error -> Puudub komponent");
+                    }
+                    else{
+                        a.add(tree2.getChild(2).getText());
+                    }
+                }
+                else{
+                    throw new UnexpectedException("Error -> Ootasin add:komponent aga sain -> " + tree2.getText());
+                }
             }
             pitsad.put(pitsanimi, a);
-        }
-
-        else if(tree instanceof PizzaParser.LisaKoostisContext){
-
         }
 
         else if(tree instanceof PizzaParser.NaitaMenuuContext){

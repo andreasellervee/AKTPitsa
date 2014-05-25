@@ -51,6 +51,8 @@ public class JPitsa extends JFrame {
 
         //Create the text pane and configure it.
         textPane = new JTextPane();
+        Font font = new Font("Verdana", Font.PLAIN, 14);
+        textPane.setFont(font);
         textPane.setCaretPosition(0);
         textPane.setMargin(new Insets(5,5,5,5));
         StyledDocument styledDoc = textPane.getStyledDocument();
@@ -204,8 +206,14 @@ public class JPitsa extends JFrame {
         public void actionPerformed(ActionEvent e) {
             changeLog.setText("");
         	String kood = textPane.getText();
+            int pikkus = kood.length();
         	Map<String, List<String>> menu = new HashMap<String, List<String>>();
+            StyledDocument doc = textPane.getStyledDocument();
+            Style style = textPane.addStyle("Pitsa", null);
             try{
+                changeLog.setForeground(Color.BLACK);
+                StyleConstants.setForeground(style, Color.BLACK);
+                doc.setCharacterAttributes(0, pikkus, style, false);
                 JPitsaMenyyParser pitsaparser = new JPitsaMenyyParser(kood);
                 if(pitsaparser.showmenu){
                     Aken.run(pitsaparser.pitsad);
@@ -223,7 +231,14 @@ public class JPitsa extends JFrame {
                     Aken.run(pitsaparser.tyybita);
                 }
             } catch (Exception ex){
+                changeLog.setForeground(Color.RED);
                 changeLog.setText(ex.getMessage());
+                String[] errorsplit = ex.getMessage().split(" ");
+                int errorIndex = Integer.parseInt(errorsplit[errorsplit.length - 1]);
+                System.out.println(errorIndex);
+
+                StyleConstants.setForeground(style, Color.RED);
+                doc.setCharacterAttributes(errorIndex, pikkus, style, false);
             }
         	
         	
